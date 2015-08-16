@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UrJoice Application</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+    <link rel="stylesheet" href="swatch-e-custom.css" />
+    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js">
+  </script>
+  </head>
+  <body>
+<section id="index" data-role="page" style="background-image:url(img/bg.png)">
+      <header data-role="header" data-theme="d" ><h1>
+      	<div align="center">
+                	<font face="Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif" color="#FFFFFF">
+                    	<a href="home.htm" style="color:#645400; text-decoration:blink;text-decoration:none">Home</a>
+                          |  
+                          <a href="menu.htm" style="color:#00881C; text-decoration:blink;text-decoration:none">Menu</a>
+                            	|  
+                          		<a href="click2call.htm" style="color:#8B0049; text-decoration:blink;text-decoration:none">Click2Call</a>
+                    </font>
+              	</div></h1></header>
+	<!--Code after this-->
+					<font color="#D3D3D3" face="Consolas, Andale Mono, Lucida Console, Lucida Sans Typewriter, Monaco, Courier New, monospace">
+	<!--adding database-->
+                        <h2>Click button below to call</h2><p>
+                        Only work on <font color="#FF9C9E">Mobile</font> or computer have <font color="#FF9C9E">credit on Skype</font>                        
+
+
+                    <input maxlength="10%" value="Click2Call" type="button">    
+	<!--End of code-->
+			</div>
+	</section>
+<script type="text/javascript">
+$(function() {
+	$( "#Button1" ).button(); 
+});
+    </script>
+</body>
+</html>

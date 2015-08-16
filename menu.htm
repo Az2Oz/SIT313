@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UrJoice Application</title>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+    <link rel="stylesheet" href="swatch-e-custom.css" />
+    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js">
+  </script>
+  </head>
+  <body>
+<section id="index" data-role="page" style="background-image:url(img/bg.png)">
+      <header data-role="header" data-theme="d" ><h1>
+      	<div align="center">
+                	<font face="Cambria, Hoefler Text, Liberation Serif, Times, Times New Roman, serif" color="#FFFFFF">
+                    	<a href="home.htm" style="color:#645400; text-decoration:blink;text-decoration:none">Home</a>
+                          |  
+                          <a href="menu.htm" style="color:#00881C; text-decoration:blink;text-decoration:none">Menu</a>
+                            	|  
+                          		<a href="click2call.htm" style="color:#8B0049; text-decoration:blink;text-decoration:none">Click2Call</a>
+                    </font>
+              	</div></h1></header>
+	<!--Code after this-->
+        <div class="content" data-role="content">
+        <font color="#ACE0E7"><h3>Main Dish Recipes</h3>
+        <p>Please choose recipe(s)</p></font>
+        <ul data-role="listview" transparent="0.5">
+            <li><a href="#maindish">Main Dish</a></li>
+            <li><a href="#dessert">Dessert</a></li>
+            <li><a href="#drink">Drink</a></li>
+        </ul>        
+      </div>
+      </div>
+    </section>	
+<!-- ------------------- -->
+<!-- ---- MAINDISH ----- -->
+<!-- ------------------- -->
+    <section id="maindish" data-role="page">
+      <header data-role="header"><h1>UrJoice</h1></header>
+      <div class="content" data-role="content">
+        <h3>Main Menu</h3>
+        <ul data-role="listview">
+            <li><a href="#menu">Go back Menu</a></li>
+            <li><a href="#dessert">Dessert</a></li>
+            <li><a href="#drink">Drink</a></li>
+        </ul>
+        <form  action="formprocessor.php" method="post">
+          <div data-role="fieldcontain">
+            <label for="select-UrJoice">Select Your Meal:</label>
+            <select id="select-UrJoice"
+                    name="select-UrJoice"
+                    data-native-menu="false"
+                    multiple="multiple">
+              <option value="choose" data-placeholder="true">Choose...</option>
+              <optgroup label="Burger"> <!--First list-->
+                <option value="OriginalChickenBurger">Original Chicken Burger</option><img src="img/maindish/LasagnawithProsciutto.jpg">
+                <option value="OriginalBeefBurger">Original Beef Burger</option>
+                <option value="OriginalVegeBurger">Original Vege Burger</option>
+                <option value="MixVegeBurger">Mix Burger</option>
+              </optgroup>
+              <optgroup label="Pasta">  <!--Pasta list picture at http://www.cookinglight.com/food/top-rated-recipes/best-pasta-recipes--> 
+                <option value="UrjoicePecorinoPasta">UrJoice's Pecorino Pasta</option>
+                <option value="VegeFettuccine " disabled="disabled">Vege Fettuccine(Soon)</option>
+                <option value="SaladwithFetaVinaigrette">Salad with Feta Vinaigrette</option>
+				<option value="LasagnawithProsciutto">Lasagna with Prosciutto</option>                
+              </optgroup>
+            </select>
+          </div>
+        </form>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#" data-role="button">Yes</a>
+          <a href="#" data-role="button">No</a>
+          <a href="#" data-role="button">Cancel</a>
+        </div>
+      </div>
+      </div>
+      <footer data-role="footer"><h1>Click2Call</h1></footer>
+    </section>
+<!-- ------------------- -->
+<!-- ----- DESSERT ----- -->
+<!-- ------------------- -->
+    <section id="dessert" data-role="page" data-theme="b">
+      <header data-role="header"><h1>UrJoice</h1></header>
+      <div class="content" data-role="content">
+        <h3>Dessert</h3>
+        <ul data-role="listview">
+            <li><a href="#menu">Go back Menu</a></li>
+            <li><a href="#maindish">Main Dish</a></li>
+            <li><a href="#drink">Drink</a></li>
+        </ul>
+        <form  action="formprocessor.php" method="post">
+          <div data-role="fieldcontain">
+            <label for="select-UrJoice">Select Your Meal:</label>
+            <select id="select-UrJoice"
+                    name="select-UrJoice"
+                    data-native-menu="false"
+                    multiple="multiple">
+              <option value="choose" data-placeholder="true">Choose...</option>
+              <optgroup label="With Wine"> <!--http://allrecipes.com-->
+                <option value="StrawberriesandWine">Strawberries and Wine
+					<br><img src="img/dessert/StrawberriesandWine.jpg" width="80%">
+				</option>
+              </optgroup>
+              <optgroup label="Tasteee">  <!--http://allrecipes.com--> 
+                <option value="UrjoicePecorinoPasta">Strawberry Cobbler</option>
+                <option value="No1RolledSugarCookies" disabled="disabled">No1 Rolled Sugar Cookies(Soon)</option>
+                <option value="PumpkinAppleCobbler">Pumpkin Apple Cobbler</option>
+				<option value="TheBestBananaPudding">The Best Banana Pudding</option>                
+              </optgroup>
+            </select>
+          </div>
+        </form>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#" data-role="button">Yes</a>
+          <a href="#" data-role="button">No</a>
+          <a href="#" data-role="button">Cancel</a>
+        </div>
+      </div>
+      </div>
+      <footer data-role="footer"><h1>Click2Call</h1></footer>
+    </section>
+<!-- ------------------- -->
+<!-- ------ DRINKS ----- -->
+<!-- ------------------- -->
+    <section id="drink" data-role="page" data-theme="c">
+      <header data-role="header"><h1>UrJoice</h1></header>
+      <div class="content" data-role="content">
+        <h3>Drink</h3>
+        <ul data-role="listview">
+            <li><a href="#menu">Go back Menu</a></li>
+            <li><a href="#maindish">Main Dish</a></li>
+            <li><a href="#dessert">Dessert</a></li>
+        </ul>
+        <form  action="formprocessor.php" method="post">
+          <div data-role="fieldcontain">
+            <label for="select-UrJoice">Select Your Meal:</label>
+            <select id="select-UrJoice"
+                    name="select-UrJoice"
+                    data-native-menu="false"
+                    multiple="multiple">
+              <option value="choose" data-placeholder="true">Choose...</option>
+              <optgroup label="Smoothie"> <!--http://allrecipes.com-->
+                <option value="Strawberry">Strawberry</option>
+				<option value="Strawberry">Banana</option>
+				<option value="Strawberry">Avocado</option>
+              </optgroup>
+              <optgroup label="Soft Drink">  <!--http://allrecipes.com--> 
+                <option value="Coke">Coke</option>
+                <option value="Sprite">Sprite</option>
+				<option value="Fanta">Fanta</option>
+              </optgroup>
+			  <optgroup label="Shakes and Floats">  <!--http://allrecipes.com--> 
+                <option value="LemonLimeFloat">Lemon Lime Float</option>
+                <option value="ItalianCreamSoda">Italian Cream Soda</option>
+				<option value="EggCream">Egg Cream</option>     
+              </optgroup>
+			  <optgroup label="Special Drinks">  <!--http://allrecipes.com--> 
+                <option value="BreakfastZingerJuice" disabled="disabled">Breakfast Zinger Juice</option>
+                <option value="SunsetSangria" disabled="disabled">Sunset Sangria</option>             
+              </optgroup>
+            </select>
+          </div>
+        </form>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a href="#" data-role="button">Yes</a>
+		  <a a href="#" data-role="button">No</a>
+          <a href="#" data-role="button">Cancel</a>
+        </div>
+      </div>
+      </div>
+	  <p>
+      <footer data-role="footer"><h1>Click2Call</h1></footer>
+    </section>
